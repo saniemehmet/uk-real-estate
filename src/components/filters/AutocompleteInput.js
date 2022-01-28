@@ -4,7 +4,7 @@ import Autocomplete from '@mui/material/Autocomplete';
 import { Button } from "@mui/material";
 import SearchIcon from '@mui/icons-material/Search';
 import { useDispatch, useSelector } from "react-redux";
-import { setArea, getSuggestions } from "../../redux/actions";
+import { setArea, getSuggestions, getProperties } from "../../redux/actions";
 
 function AutocompleteInput() {
 
@@ -20,6 +20,16 @@ function AutocompleteInput() {
         if (area.length > 4) {
             dispatch(getSuggestions('auto-complete', area));
         }
+    }
+
+    function fetchProperties() {
+        const params = {
+            area: area,
+            category: 'residential',
+            page_number: '1',
+            page_size: '40'
+        }
+        dispatch(getProperties('properties/list', params));
     }
 
     return (
@@ -43,7 +53,7 @@ function AutocompleteInput() {
                     size="small"
                     startIcon={<SearchIcon />}
                     className="ms-2 search-real-estates text-white"
-                    onClick={() => console.log(area)}>
+                    onClick={() => fetchProperties()}>
                     Search
                 </Button>
             </Col>
