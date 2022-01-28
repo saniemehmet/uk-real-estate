@@ -1,8 +1,11 @@
+import { Row } from "react-bootstrap";
+import Filters from "../components/filters/Filters";
+
 function Home(){
     return (
-        <>
-        Hello
-        </>
+        <Row>
+            <Filters/>
+        </Row>
     );
 }
 export default Home;

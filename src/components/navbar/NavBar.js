@@ -3,14 +3,14 @@ import { LinkContainer } from "react-router-bootstrap";
 
 function NavBar() {
     return (
-        <Navbar bg="primary" variant="dark" expand="lg">
+        <Navbar bg="light" expand="lg">
             <Container>
                 <Navbar.Brand href="/">RealEstate.com</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="me-auto">
+                <Navbar.Collapse id="basic-navbar-nav" className="d-flex justify-content-center">
+                    <Nav>
                         <LinkContainer to="/">
-                            <Nav.Link href="/">Home</Nav.Link>
+                            <Nav.Link href="/">Properties</Nav.Link>
                         </LinkContainer>
                     </Nav>
                 </Navbar.Collapse>
