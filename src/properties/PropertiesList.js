@@ -38,7 +38,7 @@ function PropertiesList(){
         <Card>
             <Card.Body>
                 <div className='d-flex justify-content-between align-items-center mb-2'>
-                    <Card.Title>Results</Card.Title>
+                    <Card.Title>Listings</Card.Title>
                     <ButtonGroup aria-label='View switch group'>
                         <Button variant={listView ? 'success' : 'outline-success'} onClick={() => dispatch(setListView(true))}>
                             <FontAwesomeIcon icon={faThList}></FontAwesomeIcon>
