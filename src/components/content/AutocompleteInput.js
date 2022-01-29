@@ -4,7 +4,7 @@ import Autocomplete from '@mui/material/Autocomplete';
 import { Button } from "@mui/material";
 import SearchIcon from '@mui/icons-material/Search';
 import { useDispatch, useSelector } from "react-redux";
-import { setArea, getSuggestions, getProperties } from "../../redux/actions";
+import { setArea, getSuggestions, getProperties, setListingsVisibility } from "../../redux/actions";
 
 function AutocompleteInput() {
 
@@ -30,6 +30,7 @@ function AutocompleteInput() {
             page_size: '40'
         }
         dispatch(getProperties('properties/list', params));
+        dispatch(setListingsVisibility(true));
     }
 
     return (

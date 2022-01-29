@@ -95,3 +95,31 @@ export function setListView(value) {
         payload: value
     }
 }
+
+export function setMinPrice(value) {
+    return {
+        type: actionTypes.SET_MINIMUM_PRICE,
+        payload: value
+    }
+}
+
+export function setMaxPrice(value) {
+    return {
+        type: actionTypes.SET_MAXIMUM_PRICE,
+        payload: value
+    }
+}
+
+export function setFiltersVisibility(value) {
+    return {
+        type: actionTypes.SET_FILTERS_VISIBLE,
+        payload: value
+    }
+}
+
+export function setListingsVisibility(value) {
+    return {
+        type: actionTypes.SET_LISTINGS_VISIBLE,
+        payload: value
+    }
+}

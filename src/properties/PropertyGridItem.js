@@ -1,13 +1,21 @@
 import { faBath, faBed, faEye } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Badge, Button, Card, Col, Row } from "react-bootstrap";
+import constants from "../constants";
 
 function PropertyGridItem({ property }) {
+    function getPropertyImage(){
+        if(property.image_645_430_url == null){
+            return constants.noImgAvailablePhotoUrl;
+        }
+        return property.image_645_430_url;
+    }
+
     return (
         <Card className="col-md-4 mb-md-2 p-1">
             <Row>
                 <Col>
-                    <Card.Title>
+                    <Card.Title style={{height:'3rem'}}>
                         {property.title}
                         <Badge className="badge text-white ms-2 small">{property.property_badge}</Badge>
                     </Card.Title>
@@ -21,7 +29,7 @@ function PropertyGridItem({ property }) {
                 </Col>
             </Row>
 
-            <Card.Img variant="top" src={`${property.image_645_430_url}`} style={{ height: 268 }} />
+            <Card.Img variant="top" src={getPropertyImage()} style={{ height: 268 }} />
             <Card.Title className="d-flex justify-content-center">
                 £{property.rental_prices.per_month} pcm | £{property.rental_prices.per_week} pw
             </Card.Title>

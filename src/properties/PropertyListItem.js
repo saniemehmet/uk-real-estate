@@ -1,13 +1,22 @@
 import { faBath, faBed, faEye } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Button, Card, Row, Col, Badge } from "react-bootstrap";
+import constants from "../constants";
 
 function PropertyListItem({ property }) {
+
+    function getPropertyImage(){
+        if(property.image_645_430_url == null){
+            return constants.noImgAvailablePhotoUrl;
+        }
+        return property.image_645_430_url;
+    }
+
     return (
         <Card className="mt-md-2">
             <Row>
                 <Col className="col-md-4">
-                    <Card.Img src={`${property.image_645_430_url}`} />
+                    <Card.Img src={getPropertyImage()} />
                     <Col className="text-muted text-center small"> Published: {property.last_published_date} </Col>
                 </Col>
                 <Col>
@@ -39,7 +48,7 @@ function PropertyListItem({ property }) {
                     </Row>
                     <Row>
                         <Row>
-                            <Col className="col-md-1">
+                            <Col className="col-xl-1">
                                 <FontAwesomeIcon icon={faBed} />{property.num_bedrooms}
                             </Col>
                             <Col>
@@ -47,7 +56,7 @@ function PropertyListItem({ property }) {
                             </Col>
                         </Row>
                         <Row className="text-success">
-                            <span>{property.furnished_state != null ? <strong>State:</strong> : ''}
+                            <span>{property.furnished_state != null ? <strong>State: </strong> : ''}
                                 {property.furnished_state}
                             </span>
 

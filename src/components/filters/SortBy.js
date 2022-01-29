@@ -8,11 +8,6 @@ function SortBy() {
 
     const options = [
         {
-            order_by: "viewcount",
-            ordering: "descending",
-            title: "Most popular"
-        },
-        {
             order_by: "price",
             ordering: "ascending",
             title: "Lowest price first"
@@ -36,8 +31,8 @@ function SortBy() {
 
     return (
         <Form.Group className="mb-3" controlId="filterForm.ControlSelect1">
-            <Row className="d-flex align-items-center">
-                <Col className="col-md-4 d-flex justify-content-end">
+            <Row className="d-md-flex align-items-md-center">
+                <Col className="col-md-4 d-flex justify-content-md-end">
                     <Form.Label>Sort by</Form.Label>
                 </Col>
                 <Col><Form.Select className="text-center"

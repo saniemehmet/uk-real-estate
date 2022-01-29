@@ -19,9 +19,9 @@ function SortByBedrooms() {
     }
 
     return (
-        <Form.Group className="mb-3" controlId="filterForm.ControlSelect1">
-            <Row className="d-flex align-items-center">
-                <Col className="d-flex justify-content-end">
+        <Form.Group className="mb-3 mb-md-0 mt-2 mt-sm-0" controlId="filterForm.ControlSelect1">
+            <Row className="d-md-flex align-items-md-center">
+                <Col className="d-md-flex justify-content-md-end">
                     <Form.Label>Min bedrooms:</Form.Label>
                 </Col>
                 <Col><Form.Select className="text-center"

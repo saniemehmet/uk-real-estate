@@ -64,4 +64,47 @@ export function listView(state = true, action) {
     }
 }
 
-export default combineReducers({ area, suggestions, selectedSortBy, furnishedValue, minBedrooms, properties, listView });
+export function minimumPrice(state = 0, action) {
+    switch (action.type) {
+        case actionTypes.SET_MINIMUM_PRICE:
+            return action.payload;
+        default:
+            return state
+    }
+}
+
+export function maximumPrice(state = 0, action) {
+    switch (action.type) {
+        case actionTypes.SET_MAXIMUM_PRICE:
+            return action.payload;
+        default:
+            return state
+    }
+}
+
+export function isFiltersVisible(state = false, action) {
+    switch (action.type) {
+        case actionTypes.SET_FILTERS_VISIBLE:
+            return action.payload;
+        default:
+            return state
+    }
+}
+
+export function listingsVisible(state = false, action) {
+    switch (action.type) {
+        case actionTypes.SET_LISTINGS_VISIBLE:
+            return action.payload;
+        default:
+            return state
+    }
+}
+
+export default combineReducers({
+    area, suggestions,
+    selectedSortBy, furnishedValue,
+    minBedrooms, properties,
+    listView, minimumPrice, 
+    maximumPrice, isFiltersVisible,
+    listingsVisible
+});

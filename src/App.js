@@ -1,5 +1,6 @@
 import { Container, Row } from "react-bootstrap";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import Footer from "./components/footer/Footer";
 import NavBar from "./components/navbar/NavBar";
 import Home from "./pages/Home";
 
@@ -33,6 +34,7 @@ function App() {
           </Routes>
         </Row>
       </Container>
+      <Footer/>
     </Router>
   );
 }
