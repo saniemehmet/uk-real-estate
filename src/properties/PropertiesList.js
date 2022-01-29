@@ -1,11 +1,12 @@
 
 import { Button, ButtonGroup, Card } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
-import PropertyListItem from "./PropertyListItem";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGripHorizontal, faThList } from '@fortawesome/free-solid-svg-icons';
 import { setListView } from "../redux/actions";
 import NoResults from "./NoResults";
+import PropertyListItem from "./PropertyListItem";
+import PropertyGridItem from "./PropertyGridItem";
 
 function PropertiesList(){
     const dispatch = useDispatch();
@@ -31,7 +32,13 @@ function PropertiesList(){
     }
 
     function getPropertyGridItems(){
-
+        return properties.map(property => {
+            return <PropertyGridItem
+                key={property.listing_id}
+                property={property}
+            >
+            </PropertyGridItem>
+        });
     }
 
     return (

@@ -5,7 +5,7 @@ function NavBar() {
     return (
         <Navbar bg="light" expand="lg">
             <Container>
-                <Navbar.Brand href="/">RealEstate.com</Navbar.Brand>
+                <Navbar.Brand href="/">UKRealHouse.com</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav" className="d-flex justify-content-center">
                     <Nav>
