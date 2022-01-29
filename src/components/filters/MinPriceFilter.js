@@ -13,6 +13,7 @@ function MinPriceFilter() {
                 </Col>
                 <Col>
                     <Form.Control
+                        className="text-center"
                         type="number" 
                         min={0}
                         placeholder="0"

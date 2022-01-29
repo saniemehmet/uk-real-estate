@@ -20,7 +20,7 @@ function HighlightedContent() {
                                 src="https://media.istockphoto.com/photos/red-for-rent-real-estate-sign-in-front-house-picture-id960624848?k=20&m=960624848&s=612x612&w=0&h=An1VNo1dJ-5QI_J-4bOdrYpyidvhSs-YUqwOaGNzR_g=" />
                         </a>
                         <Card.Body>
-                            <Card.Title className="mark">12 Things Everyone Should Know Before Renting an Apartment</Card.Title>
+                            <Card.Title className="mark text-center">12 Things Everyone Should Know Before Renting an Apartment</Card.Title>
                         </Card.Body>
                     </Card>
                     <Card className="col ms-2">
@@ -32,7 +32,7 @@ function HighlightedContent() {
                                 src="https://amendo.com/wp-content/uploads/2017/06/bigstock-Young-Woman-Traveler-Looking-T-173379065-1024x683.jpg" />
                         </a>
                         <Card.Body>
-                            <Card.Title className="mark">Moving to a New City Alone: Challenges and Solutions</Card.Title>
+                            <Card.Title className="mark text-center">Moving to a New City Alone: Challenges and Solutions</Card.Title>
                         </Card.Body>
                     </Card>
                     <Card className="col ms-2 me-2">
@@ -44,7 +44,7 @@ function HighlightedContent() {
                                 src="https://www.investopedia.com/thmb/dLi4N69Vqe63ziQ4M7TFvA0G6VQ=/3864x2577/filters:fill(auto,1)/businessman-as-a-property-agent-or-investor-calculating-growth-of-return-on-investment-in-real-estate-before-signing-contract-at-the-office-931801836-5c04a8a046e0fb0001c4a37f.jpg" />
                         </a>
                         <Card.Body>
-                            <Card.Title className="mark">How to turn your own home into a successful investment</Card.Title>
+                            <Card.Title className="mark text-center">How to turn your own home into a successful investment</Card.Title>
                         </Card.Body>
                     </Card>
                 </Row>
